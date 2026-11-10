@@ -51,7 +51,7 @@ nav a[aria-current=page]{border-bottom-color:var(--gold)}
 .ed{color:#DDE0E5;font-size:.95rem}
 .ed b{display:block;color:#F1F2F4}
 h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
-.co{color:var(--muted);margin:0 0 1.5rem}
+.co{margin:0 0 1.75rem;padding:1rem 1.25rem;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:10px}.co strong{display:block;font-size:1.3rem;line-height:1.35}.co span{color:var(--muted);font-size:.95rem}
 .tl{border-left:3px solid var(--gold);margin:0 0 3rem .5rem;padding-left:1.5rem}
 .job{margin-bottom:2rem}
 .job h3{margin:0;font-size:1.1rem}
@@ -61,7 +61,7 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;display:flex;flex-direction:column}
 .card h3{margin:0 0 .3rem;font-size:1.1rem;line-height:1.35}
 .role{color:var(--muted);font-size:.9rem;margin:0 0 1rem}
-.kpis{display:flex;flex-wrap:wrap;gap:.9rem 1.5rem;margin:0 0 1rem;padding:.9rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.card>div.vi,.card>div.en{margin-bottom:1rem}.kpis{display:flex;flex-wrap:wrap;gap:.9rem 1.5rem;margin:auto 0 0;padding:.9rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .kpis div{min-width:5.5rem}
 .kpis b{display:block;font-size:1.55rem;line-height:1.2;color:var(--accent)}
 .kpis span{font-size:.8rem;color:var(--muted)}
@@ -69,8 +69,8 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
 .auto{margin:1.5rem 0 3rem}
 .prods{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:3rem}
 .prod{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.frame{position:relative;aspect-ratio:16/10;background:var(--bg);display:grid;place-items:center;border-bottom:1px solid var(--line)}
-.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame{position:relative;aspect-ratio:16/10;background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.frame a{position:absolute;inset:0}.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .frame .ph{display:none;color:var(--muted);font-size:.85rem;padding:1rem;text-align:center}
 .frame.empty .ph{display:block}
 .prod div.t{padding:1.1rem 1.25rem 1.3rem}
@@ -118,6 +118,9 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
         <p class="en">Data analyst &amp; digital transformation specialist with nearly 4 years of experience in labor supply and recruitment. Experienced in digitizing 12,000 employee records and managing (as PM) 2 digitization projects for HR and recruitment processes. Proficient in Excel, SQL, Looker Studio, Power BI, Google Apps Script and n8n; builds customized reports for each user group. Solid command of real-world HR operations.</p>
         <div class="two">
           <div>
+            <h3><span class="vi">Ngoại ngữ</span><span class="en">Languages</span></h3>
+            <ul class="vi"><li>Tiếng Anh: IELTS 7.5 overall (9.0 Reading), 10 năm phiên dịch tự do</li><li>Tiếng Nhật: JLPT N3</li></ul>
+            <ul class="en"><li>English: IELTS 7.5 overall (9.0 Reading), 10 years of freelance interpreting</li><li>Japanese: JLPT N3</li></ul>
             <h3><span class="vi">Kỹ năng</span><span class="en">Skills</span></h3>
             <ul class="vi">
               <li>Phân tích dữ liệu: Excel, SQL (PostgreSQL/Supabase), Python</li>
@@ -133,9 +136,6 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
               <li>Digital transformation: requirements documents, process mapping, UAT, user training; vibe coding (React/Next.js, Supabase, Vercel, GitHub)</li>
               <li>Marketing: channel building, Meta/TikTok ads, WordPress websites</li>
             </ul>
-            <h3><span class="vi">Ngoại ngữ</span><span class="en">Languages</span></h3>
-            <ul class="vi"><li>Tiếng Anh: IELTS 7.5 overall (9.0 Reading), 10 năm phiên dịch tự do</li><li>Tiếng Nhật: JLPT N3</li></ul>
-            <ul class="en"><li>English: IELTS 7.5 overall (9.0 Reading), 10 years of freelance interpreting</li><li>Japanese: JLPT N3</li></ul>
           </div>
           <div>
             <h3><span class="vi">Học vấn</span><span class="en">Education</span></h3>
@@ -163,8 +163,7 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
 
 <section id="experience" hidden><div class="wrap">
   <h2 class="s"><span class="vi">Kinh nghiệm làm việc</span><span class="en">Work experience</span></h2>
-  <p class="co vi">Công ty cung ứng và tuyển dụng lao động | 01/2023 – nay</p>
-  <p class="co en">Labor supply and recruitment company | 01/2023 – present</p>
+  <div class="co"><strong>Công ty Cổ phần Giải pháp nhân sự &amp; Tư vấn đầu tư K-Outsourcing</strong><span class="vi">Cung ứng và tuyển dụng lao động | 01/2023 – nay</span><span class="en">Labor supply and recruitment | 01/2023 – present</span></div>
   <div class="tl">
     <div class="job">
       <h3 class="vi">Chuyên viên Marketing – Chiến lược (Dữ liệu và Tự động hóa)</h3><h3 class="en">Marketing &amp; Strategy Specialist (Data and Automation)</h3>
@@ -193,23 +192,23 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
     <article class="card">
       <h3 class="vi">Dự án ERP số hóa toàn bộ hệ sinh thái của công ty nhân lực</h3><h3 class="en">ERP project digitizing the entire ecosystem of a staffing company</h3>
       <p class="role vi">Vai trò: Quản lý dự án</p><p class="role en">Role: Project manager</p>
-      <div class="kpis"><div><b>~200</b><span class="vi">người dùng hiện tại</span><span class="en">users today</span></div><div><b>2.000–3.000</b><span class="vi">dự kiến mở rộng</span><span class="en">expected</span></div><div><b>70%</b><span class="vi">khối lượng sau 6 tháng</span><span class="en">of scope in 6 months</span></div></div>
       <div class="vi"><p><strong>Vấn đề:</strong> các bộ phận nghiệp vụ của toàn công ty làm việc rời rạc trên các nền tảng và công cụ khác nhau, không có liên kết.</p><p><strong>Giải pháp:</strong> phần mềm nghiệp vụ gồm quản lý tuyển dụng, nhân sự, khách hàng, CTV, chi phí, có phân quyền, phát triển từ bản thử nghiệm vibe coding cùng đội kỹ thuật.</p></div>
       <div class="en"><p><strong>Problem:</strong> departments across the company worked in isolation on separate platforms and tools, with no connection.</p><p><strong>Solution:</strong> business software covering recruitment, HR, clients, collaborators and costs, with role-based access, developed from a vibe-coded prototype together with the engineering team.</p></div>
+      <div class="kpis"><div><b>~200</b><span class="vi">người dùng hiện tại</span><span class="en">users today</span></div><div><b>2.000–3.000</b><span class="vi">người dùng dự kiến</span><span class="en">users expected</span></div><div><b>70%</b><span class="vi">khối lượng sau 6 tháng</span><span class="en">of scope in 6 months</span></div></div>
     </article>
     <article class="card">
       <h3 class="vi">Dự án HRM số hóa quy trình quản trị nhân sự</h3><h3 class="en">HRM project digitizing HR management processes</h3>
       <p class="role vi">Vai trò: Quản lý dự án</p><p class="role en">Role: Project manager</p>
-      <div class="kpis"><div><b>12.000</b><span class="vi">hồ sơ được số hóa</span><span class="en">records digitized</span></div><div><b>50</b><span class="vi">nhân sự nội bộ được đào tạo</span><span class="en">internal staff trained</span></div></div>
       <div class="vi"><p><strong>Vấn đề:</strong> hồ sơ lao động quản lý thủ công, dữ liệu phân tán.</p><p><strong>Giải pháp:</strong> triển khai phần mềm quản trị nhân sự thuê ngoài, tùy chỉnh cùng đội kỹ thuật; số hóa và chuẩn hóa hồ sơ.</p></div>
       <div class="en"><p><strong>Problem:</strong> employee records managed manually, data scattered.</p><p><strong>Solution:</strong> deployed outsourced HR management software, customized with the engineering team; digitized and standardized the records.</p></div>
+      <div class="kpis"><div><b>12.000</b><span class="vi">hồ sơ được số hóa</span><span class="en">records digitized</span></div><div><b>50</b><span class="vi">nhân sự nội bộ được đào tạo</span><span class="en">internal staff trained</span></div></div>
     </article>
     <article class="card">
       <h3 class="vi">Hệ thống dashboard báo cáo trên Looker Studio</h3><h3 class="en">Looker Studio reporting dashboards</h3>
       <p class="role vi">Vai trò: Thiết kế và vận hành</p><p class="role en">Role: Designer and operator</p>
-      <div class="kpis"><div><b>3</b><span class="vi">nhóm người dùng: Ban Giám đốc, Marketing, quản lý dự án</span><span class="en">user groups: Board, Marketing, project managers</span></div></div>
       <div class="vi"><p><strong>Vấn đề:</strong> các nhóm cần cùng một nguồn dữ liệu tuyển dụng nhưng ở những góc nhìn khác nhau.</p><p><strong>Giải pháp:</strong> dashboard riêng cho từng nhóm: hiệu quả tuyển dụng theo kênh cho Ban Giám đốc, hiệu quả kênh social và quảng cáo cho Marketing, tình hình tuyển dụng và quy mô nhân sự tại dự án thời vụ cho quản lý dự án.</p></div>
       <div class="en"><p><strong>Problem:</strong> each group needed the same recruitment data from a different angle.</p><p><strong>Solution:</strong> a dedicated dashboard per group: recruitment performance by channel for the Board, social and ad performance for Marketing, hiring status and headcount at seasonal projects for project managers.</p></div>
+      <div class="kpis"><div><b>3</b><span class="vi">nhóm người dùng: Ban Giám đốc, Marketing, quản lý dự án</span><span class="en">user groups: Board, Marketing, project managers</span></div></div>
     </article>
   </div>
   <p class="auto vi"><strong>Tự động hóa bằng Apps Script và n8n:</strong> tự động đổ dữ liệu các nguồn lead vào danh sách tổng, tự động phân bổ lead cho nhân viên tư vấn theo quy tắc, xây chatbot LLM tư vấn ứng viên trên fanpage Facebook và Zalo.</p>
@@ -222,10 +221,10 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
     <article class="prod"><div class="frame"><img src="img/product-1.png" alt="" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph vi">Thêm ảnh: img/product-1.png</span><span class="ph en">Add image: img/product-1.png</span></div><div class="t">
       <h3 class="vi">Prototype phần mềm quản lý nghiệp vụ tuyển dụng</h3><h3 class="en">Recruitment operations software prototype</h3>
       <p class="vi">Bản thử nghiệm xây bằng vibe coding (React/Next.js, Supabase) để kiểm chứng quy trình tuyển dụng với nhân sự nội bộ trước khi đầu tư phát triển quy mô lớn.</p><p class="en">A vibe-coded prototype (React/Next.js, Supabase) used to validate the recruitment workflow with internal staff before investing in a large-scale build.</p></div></article>
-    <article class="prod"><div class="frame"><img src="img/product-2.png" alt="" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph vi">Thêm ảnh: img/product-2.png</span><span class="ph en">Add image: img/product-2.png</span></div><div class="t">
+    <article class="prod"><div class="frame"><a href="img/product-2.png" target="_blank" rel="noopener"><img src="img/product-2.png" alt="Seasonal outsourcing project dashboard with simulated data"></a><span class="ph vi">Thêm ảnh: img/product-2.png</span><span class="ph en">Add image: img/product-2.png</span></div><div class="t">
       <h3 class="vi">Dashboard dự án outsourcing thời vụ</h3><h3 class="en">Seasonal outsourcing project dashboard</h3>
       <p class="vi">Theo dõi tình hình triển khai, tuyển dụng và quy mô nhân sự duy trì tại các dự án thời vụ, giúp lên kế hoạch tuyển bù khi phát sinh thiếu.</p><p class="en">Tracks rollout, recruitment and headcount across seasonal projects, helping plan replacement hiring when shortages appear.</p></div></article>
-    <article class="prod"><div class="frame"><img src="img/product-3.png" alt="" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph vi">Thêm ảnh: img/product-3.png</span><span class="ph en">Add image: img/product-3.png</span></div><div class="t">
+    <article class="prod"><div class="frame"><a href="img/product-3.png" target="_blank" rel="noopener"><img src="img/product-3.png" alt="Personal finance dashboard with figures masked"></a><span class="ph vi">Thêm ảnh: img/product-3.png</span><span class="ph en">Add image: img/product-3.png</span></div><div class="t">
       <h3 class="vi">Dashboard quản lý tài chính cá nhân</h3><h3 class="en">Personal finance dashboard</h3>
       <p class="vi">Dashboard tự xây để theo dõi thu chi và tình hình tài chính cá nhân.</p><p class="en">A self-built dashboard for tracking personal income, spending and overall finances.</p></div></article>
     <article class="prod"><div class="frame"><img src="img/product-4.png" alt="" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph vi">Thêm ảnh: img/product-4.png</span><span class="ph en">Add image: img/product-4.png</span></div><div class="t">
