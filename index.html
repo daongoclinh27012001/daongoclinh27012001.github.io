@@ -66,7 +66,6 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
 .kpis b{display:block;font-size:1.55rem;line-height:1.2;color:var(--accent)}
 .kpis span{font-size:.8rem;color:var(--muted)}
 .card p{margin:0 0 .65rem;font-size:.93rem}
-.auto{margin:1.5rem 0 3rem}
 .prods{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:3rem}
 .prod{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .frame{position:relative;aspect-ratio:16/10;background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--line)}
@@ -77,8 +76,19 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
 .prod h3{margin:0 0 .35rem;font-size:1.05rem}
 .prod p{margin:0;color:var(--muted);font-size:.93rem}
 .note{font-size:.8rem;color:var(--muted);margin:0 0 3rem}
-@media (max-width:900px){.three{grid-template-columns:1fr}}
-@media (max-width:800px){.bar{flex-wrap:wrap;padding:.5rem 0}nav{order:3;width:100%;overflow-x:auto}.hg{grid-template-columns:1fr;gap:2rem}.two{grid-template-columns:1fr}.prods{grid-template-columns:1fr}}
+img,svg{max-width:100%}
+@media (max-width:900px){.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:800px){
+.bar{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"brand ctl" "nav nav";gap:.35rem .75rem;align-items:center;min-height:0;padding:.6rem 1.25rem 0}
+.brand{grid-area:brand;font-size:1.05rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctl{grid-area:ctl;gap:.4rem}
+.lb button{padding:.25rem .6rem}
+nav{grid-area:nav;display:flex;justify-content:space-between;gap:.25rem}
+nav a{padding:.55rem .2rem;font-size:.82rem;line-height:1.25;text-align:center;white-space:nowrap}
+.hg{grid-template-columns:minmax(0,1fr);gap:2rem;padding:2.25rem 1.25rem}
+.two,.prods{grid-template-columns:minmax(0,1fr)}
+.hero h2{font-size:1.5rem}
+}
 </style>
 </head>
 <body>
@@ -186,7 +196,7 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
   </div>
 </div></section>
 
-<section id="projects" hidden><div class="wrap">
+<section id="projects" hidden><div class="wrap" style="padding-bottom:3rem">
   <h2 class="s"><span class="vi">Dự án tiêu biểu</span><span class="en">Featured projects</span></h2>
   <div class="three">
     <article class="card">
@@ -208,11 +218,9 @@ h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
       <p class="role vi">Vai trò: Thiết kế và vận hành</p><p class="role en">Role: Designer and operator</p>
       <div class="vi"><p><strong>Vấn đề:</strong> các nhóm cần cùng một nguồn dữ liệu tuyển dụng nhưng ở những góc nhìn khác nhau.</p><p><strong>Giải pháp:</strong> dashboard riêng cho từng nhóm: hiệu quả tuyển dụng theo kênh cho Ban Giám đốc, hiệu quả kênh social và quảng cáo cho Marketing, tình hình tuyển dụng và quy mô nhân sự tại dự án thời vụ cho quản lý dự án.</p></div>
       <div class="en"><p><strong>Problem:</strong> each group needed the same recruitment data from a different angle.</p><p><strong>Solution:</strong> a dedicated dashboard per group: recruitment performance by channel for the Board, social and ad performance for Marketing, hiring status and headcount at seasonal projects for project managers.</p></div>
-      <div class="kpis"><div><b>3</b><span class="vi">nhóm người dùng: Ban Giám đốc, Marketing, quản lý dự án</span><span class="en">user groups: Board, Marketing, project managers</span></div></div>
+      <div class="kpis"><div><b>3</b><span class="vi">nhóm người dùng</span><span class="en">user groups</span></div></div>
     </article>
   </div>
-  <p class="auto vi"><strong>Tự động hóa bằng Apps Script và n8n:</strong> tự động đổ dữ liệu các nguồn lead vào danh sách tổng, tự động phân bổ lead cho nhân viên tư vấn theo quy tắc, xây chatbot LLM tư vấn ứng viên trên fanpage Facebook và Zalo.</p>
-  <p class="auto en"><strong>Automation with Apps Script and n8n:</strong> lead data from every source flows into a master list, leads are assigned to advisors by rules, and an LLM chatbot advises candidates on a Facebook fanpage and Zalo.</p>
 </div></section>
 
 <section id="products" hidden><div class="wrap">
