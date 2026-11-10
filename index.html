@@ -4,196 +4,150 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Đào Ngọc Linh | Data &amp; BI, HR Analytics</title>
-<meta name="description" content="Portfolio của Đào Ngọc Linh: phân tích dữ liệu nhân sự, dashboard, tự động hóa và chuyển đổi số. / Portfolio of Linh Dao Ngoc: HR analytics, dashboards, automation and digital transformation.">
+<meta name="description" content="Portfolio của Đào Ngọc Linh: phân tích dữ liệu nhân sự, dashboard, tự động hóa, chuyển đổi số. / Portfolio of Linh Dao Ngoc: HR analytics, dashboards, automation, digital transformation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F6F7F9;--card:#fff;--ink:#1B2433;--muted:#566175;--line:#DCE0E7;--accent:#0E7C86;--soft:#DCEFF1;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F141C;--card:#161D28;--ink:#E7EBF2;--muted:#9AA5B8;--line:#263042;--accent:#4CC3CF;--soft:#15343A;color-scheme:dark}}
+:root{--bg:#F4F5F7;--card:#fff;--ink:#23272E;--muted:#5C6470;--line:#DADDE3;--accent:#8F6B1C;--gold:#C5A24D;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#181B20;--card:#20242B;--ink:#ECEEF1;--muted:#A2A9B5;--line:#343A44;--accent:#D9B867;--gold:#D9B867;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#181B20;--card:#20242B;--ink:#ECEEF1;--muted:#A2A9B5;--line:#343A44;--accent:#D9B867;--gold:#D9B867;color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+[hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 html[lang=vi] .en,html[lang=en] .vi{display:none}
 a{color:var(--accent)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
-header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
-.brand{font-weight:700;letter-spacing:.01em}
-.lb{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
-.lb button{font:inherit;font-size:.875rem;border:0;background:none;color:var(--muted);padding:.35rem .9rem;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.25rem}
+.top{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.6rem}
+.brand{font-weight:700;font-size:1.1rem;text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:.25rem}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:.4rem .8rem;border-bottom:3px solid transparent;white-space:nowrap}
+nav a[aria-current=page]{border-bottom-color:var(--gold)}
+.ctl{display:flex;gap:.5rem;align-items:center}
+.lb{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lb button,.tg{font:inherit;font-size:.85rem;border:0;background:none;color:var(--muted);padding:.3rem .75rem;cursor:pointer}
 .lb button[aria-pressed=true]{background:var(--ink);color:var(--bg);font-weight:500}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding:2.5rem 0 3rem}
-h1{font-size:clamp(1.9rem,4.2vw,2.9rem);line-height:1.2;margin:0 0 1rem;font-weight:700;letter-spacing:-.01em}
-.lead{color:var(--muted);font-size:1.075rem;max-width:34rem;margin:0 0 1.5rem}
-.btns{display:flex;flex-wrap:wrap;gap:.75rem}
-.btn{display:inline-block;padding:.65rem 1.25rem;border-radius:8px;text-decoration:none;font-weight:500;border:1px solid var(--ink);color:var(--ink)}
-.btn.main{background:var(--ink);color:var(--bg)}
-.funnel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.25rem 1.25rem 1rem}
-.funnel h2{font-size:.95rem;margin:0 0 .9rem;font-weight:700}
-.row{display:grid;grid-template-columns:8.5rem 1fr;gap:.75rem;align-items:center;margin:.5rem 0;font-size:.875rem}
-.bar{height:1.7rem;border-radius:5px;background:var(--accent);width:var(--w);min-width:2.8rem;color:#fff;font-size:.8rem;font-weight:700;display:flex;align-items:center;padding-left:.55rem}
-.bar.last{background:var(--ink);color:var(--bg)}
-.note{font-size:.78rem;color:var(--muted);margin:.8rem 0 0}
-.facts{display:flex;flex-wrap:wrap;gap:1rem 3rem;margin:0;padding:1.5rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tg{border:1px solid var(--line);border-radius:999px;width:2.1rem;height:2.1rem;padding:0;display:grid;place-items:center;color:var(--ink)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#2E343D,#1A1E24);color:#F1F2F4}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hg{position:relative;display:grid;grid-template-columns:15rem 1fr;gap:3rem;padding:3.5rem 1.25rem}
+.who{text-align:center}
+.av{position:relative;width:10.5rem;height:10.5rem;margin:0 auto 1rem;border-radius:50%;border:4px solid #E2C37A;background:linear-gradient(135deg,#5A626E,#3A404A);display:grid;place-items:center;font-size:2.6rem;font-weight:700;color:#E2C37A;overflow:hidden}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.who h1{font-size:1.25rem;margin:0}
+.who p{margin:.25rem 0 0;color:#C3C8D0;font-size:.95rem}
+.links{display:flex;gap:.5rem;justify-content:center;margin-top:1rem}
+.links a{color:#F1F2F4;border:1px solid #6B7380;border-radius:999px;padding:.25rem .8rem;font-size:.85rem;text-decoration:none}
+.hero h2{font-size:1.75rem;margin:0 0 .75rem}
+.hero h3{font-size:1.1rem;margin:0 0 .5rem;color:#E2C37A}
+.hero p{color:#DDE0E5;margin:0 0 1.1rem;max-width:40rem}
+.dl{display:inline-block;padding:.55rem 1.2rem;border-radius:8px;background:#E2C37A;color:#1A1E24;font-weight:700;text-decoration:none;margin-bottom:1.75rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2.5rem}
+.hero ul{margin:0;padding-left:1.1rem;color:#DDE0E5;font-size:.95rem}
+.hero li{margin-bottom:.35rem}
+.hero .ed{margin-bottom:.75rem;color:#DDE0E5;font-size:.95rem}
+.hero .ed b{display:block;color:#F1F2F4}
+.facts{display:flex;flex-wrap:wrap;gap:1rem 3rem;margin:2rem 0 0;padding:0}
 .facts div{min-width:9rem}
 .facts dt{font-size:1.9rem;font-weight:700;line-height:1.2}
 .facts dd{margin:0;color:var(--muted);font-size:.9rem}
-section{padding:3rem 0 0}
-h2.s{font-size:1.5rem;margin:0 0 1.5rem;letter-spacing:-.005em}
-.case{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.5rem;margin-bottom:1.25rem;display:grid;grid-template-columns:1.6fr 1fr;gap:1.5rem}
-.case h3{margin:0 0 .6rem;font-size:1.2rem;line-height:1.35}
-.case p{margin:0 0 .8rem}
-.case dl{margin:0;padding-left:1.25rem;border-left:3px solid var(--soft);font-size:.9rem}
-.case dt{font-weight:700;margin-top:.6rem}.case dt:first-child{margin-top:0}
-.case dd{margin:0;color:var(--muted)}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
-.cols h3{font-size:1rem;margin:0 0 .4rem}
-.cols p,.cols ul{margin:0;color:var(--muted);font-size:.95rem}
-.cols ul{padding-left:1.1rem}
-.about{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem}
-.about ul{padding-left:1.1rem;margin:0}
-.about li{margin-bottom:.5rem}
-footer{margin-top:4rem;padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.875rem}
-footer .c{font-size:1.05rem;color:var(--ink);margin-bottom:.75rem}
-@media (max-width:760px){.hero,.case,.about{grid-template-columns:1fr}.row{grid-template-columns:6.8rem 1fr}}
+h2.s{font-size:1.5rem;margin:2.5rem 0 1.25rem}
+.aw{padding-left:1.1rem;margin:0 0 3rem}.aw li{margin-bottom:.4rem}
+.tl{border-left:3px solid var(--gold);margin:0 0 3rem .5rem;padding-left:1.5rem}
+.job{margin-bottom:2rem}
+.job h3{margin:0;font-size:1.1rem}
+.job .when{color:var(--muted);font-size:.9rem;margin:.15rem 0 .5rem}
+.job ul{margin:0;padding-left:1.1rem}.job li{margin-bottom:.35rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.card h3{margin:0 0 .5rem;font-size:1.15rem}
+.card p{margin:0 0 .7rem}
+.meta{font-size:.9rem;color:var(--muted);padding-left:.9rem;border-left:3px solid var(--gold)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem;margin-bottom:3rem}
+.cols h3{font-size:1rem;margin:0 0 .3rem}.cols p{margin:0;color:var(--muted);font-size:.95rem}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.25rem;margin-bottom:1.5rem}
+.shot{margin:0}
+.frame{position:relative;aspect-ratio:16/10;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card);display:grid;place-items:center}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame .ph{display:none;color:var(--muted);font-size:.85rem;text-align:center;padding:1rem}
+.frame.empty{border-style:dashed}.frame.empty .ph{display:block}
+.shot figcaption{font-size:.9rem;margin-top:.5rem}
+.funnel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.25rem;margin-bottom:1.25rem;max-width:34rem}
+.funnel h3{font-size:.95rem;margin:0 0 .8rem}
+.row{display:grid;grid-template-columns:8.5rem 1fr;gap:.75rem;align-items:center;margin:.45rem 0;font-size:.875rem}
+.b{height:1.6rem;border-radius:5px;background:var(--gold);width:var(--w);min-width:2.8rem;color:#1A1E24;font-size:.8rem;font-weight:700;display:flex;align-items:center;padding-left:.5rem}
+.b.last{background:var(--ink);color:var(--bg)}
+.note{font-size:.78rem;color:var(--muted);margin:.7rem 0 0}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.875rem;margin-top:2rem}
+@media (max-width:800px){.bar{flex-wrap:wrap;padding:.5rem 0}nav{order:3;width:100%;overflow-x:auto}.hg{grid-template-columns:1fr;gap:2rem}.two{grid-template-columns:1fr}.row{grid-template-columns:6.8rem 1fr}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div class="brand">Đào Ngọc Linh</div>
-  <div class="lb" role="group" aria-label="Language / Ngôn ngữ">
-    <button type="button" data-l="vi" aria-pressed="true">Tiếng Việt</button>
-    <button type="button" data-l="en" aria-pressed="false">English</button>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="#bio">Đào Ngọc Linh</a>
+  <nav aria-label="Menu">
+    <a href="#bio"><span class="vi">Giới thiệu</span><span class="en">About</span></a>
+    <a href="#experience"><span class="vi">Kinh nghiệm</span><span class="en">Experience</span></a>
+    <a href="#projects"><span class="vi">Dự án</span><span class="en">Projects</span></a>
+    <a href="#products"><span class="vi">Sản phẩm</span><span class="en">Products</span></a>
+  </nav>
+  <div class="ctl">
+    <div class="lb" role="group" aria-label="Language / Ngôn ngữ"><button type="button" data-l="vi">VI</button><button type="button" data-l="en">EN</button></div>
+    <button type="button" class="tg" id="theme" aria-label="Dark / light"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
   </div>
-</header>
+</div></header>
 
 <main>
-<div class="hero">
-  <div>
-    <h1><span class="vi">Biến dữ liệu nhân sự thành quyết định cho lãnh đạo</span><span class="en">Turning HR data into decisions leaders can act on</span></h1>
-    <p class="lead vi">Chuyên viên phân tích số liệu và chuyển đổi số với gần 4 năm trong ngành cung ứng và tuyển dụng lao động. Tôi xây báo cáo, tự động hóa và phần mềm nghiệp vụ cho nhân sự.</p>
-    <p class="lead en">Data analyst and digital transformation specialist with nearly 4 years in labor supply and recruitment. I build reports, automations and business software for HR.</p>
-    <div class="btns">
-      <a class="btn main" href="#cases"><span class="vi">Xem case study</span><span class="en">View case studies</span></a>
-      <a class="btn" href="cv-vi.pdf" id="cvlink"><span class="vi">Tải CV (PDF)</span><span class="en">Download CV (PDF)</span></a>
+<section id="bio">
+  <div class="hero">
+    <svg viewBox="0 0 1200 520" preserveAspectRatio="none" aria-hidden="true"><polygon fill="rgba(255,255,255,.04)" points="0,170 280,90 620,200 900,70 1200,160 1200,520 0,520"/><polygon fill="rgba(226,195,122,.07)" points="0,300 340,210 700,320 1000,200 1200,280 1200,520 0,520"/><polygon fill="rgba(255,255,255,.05)" points="0,420 400,350 760,440 1200,360 1200,520 0,520"/></svg>
+    <div class="wrap hg">
+      <div class="who">
+        <div class="av">ĐL<img src="avatar.jpg" alt="" onerror="this.remove()"></div>
+        <h1>Đào Ngọc Linh</h1>
+        <p class="vi">Chuyên viên Phân tích số liệu và Chuyển đổi số</p>
+        <p class="en">Data Analyst and Digital Transformation Specialist</p>
+        <p>Hà Nội</p>
+        <div class="links"><a href="mailto:daolinh921@gmail.com">Email</a><a href="https://linkedin.com/in/linh-dao-ngoc">LinkedIn</a></div>
+      </div>
+      <div>
+        <h2><span class="vi">Giới thiệu</span><span class="en">About me</span></h2>
+        <p class="vi">Gần 4 năm trong ngành cung ứng và tuyển dụng lao động. Tôi số hóa hồ sơ nhân sự, xây báo cáo cho lãnh đạo, tự động hóa quy trình và dẫn dắt dự án phần mềm nghiệp vụ nhân sự, từ bản thử nghiệm đến hệ thống quy mô lớn.</p>
+        <p class="en">Nearly 4 years in labor supply and recruitment. I digitize HR records, build reports for leadership, automate processes and lead HR business software projects, from prototype to large-scale system.</p>
+        <a class="dl" href="cv-vi.pdf" id="cvlink"><span class="vi">Tải CV (PDF)</span><span class="en">Download CV (PDF)</span></a>
+        <div class="two">
+          <div>
+            <h3><span class="vi">Kỹ năng</span><span class="en">Skills</span></h3>
+            <ul>
+              <li>Excel (Power Query), SQL, Python</li>
+              <li>Looker Studio, <span class="vi">báo cáo theo từng nhóm người dùng</span><span class="en">audience-specific reports</span></li>
+              <li>Apps Script, n8n, <span class="vi">chatbot LLM</span><span class="en">LLM chatbots</span></li>
+              <li><span class="vi">URD, UAT, vibe coding (React/Next.js, Supabase)</span><span class="en">Requirements, UAT, vibe coding (React/Next.js, Supabase)</span></li>
+              <li><span class="vi">Nghiệp vụ tuyển dụng và nhân sự</span><span class="en">Recruitment and HR operations</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3><span class="vi">Học vấn</span><span class="en">Education</span></h3>
+            <div class="ed"><b class="vi">Đại học Kinh tế Quốc dân, 2019–2023</b><b class="en">National Economics University, 2019–2023</b><span class="vi">Khoa Kinh tế Quốc tế, tốt nghiệp Xuất sắc, GPA 3.76/4.0</span><span class="en">Faculty of International Economics, Excellent honors, GPA 3.76/4.0</span></div>
+            <h3><span class="vi">Ngoại ngữ</span><span class="en">Languages</span></h3>
+            <ul>
+              <li><span class="vi">Tiếng Anh: IELTS 7.5 (Reading 9.0), 10 năm phiên dịch tự do</span><span class="en">English: IELTS 7.5 (Reading 9.0), 10 years freelance interpreting</span></li>
+              <li><span class="vi">Tiếng Nhật: JLPT N3</span><span class="en">Japanese: JLPT N3</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="funnel" role="img" aria-label="Sample recruitment funnel: 100% leads, 72% contacted, 41% interviewed, 22% started work, 17% still working at day 90">
-    <h2><span class="vi">Phễu tuyển dụng, từ lead đến gắn bó 90 ngày</span><span class="en">Recruitment funnel, from lead to day 90</span></h2>
-    <div class="row"><span><span class="vi">Lead</span><span class="en">Leads</span></span><div class="bar" style="--w:100%">100%</div></div>
-    <div class="row"><span><span class="vi">Đã liên hệ</span><span class="en">Contacted</span></span><div class="bar" style="--w:72%">72%</div></div>
-    <div class="row"><span><span class="vi">Phỏng vấn</span><span class="en">Interviewed</span></span><div class="bar" style="--w:41%">41%</div></div>
-    <div class="row"><span><span class="vi">Đi làm</span><span class="en">Started work</span></span><div class="bar" style="--w:22%">22%</div></div>
-    <div class="row"><span><span class="vi">Còn làm sau 90 ngày</span><span class="en">Still working at day 90</span></span><div class="bar last" style="--w:17%">17%</div></div>
-    <p class="note vi">Dữ liệu mô phỏng, không phải số liệu thật của công ty.</p>
-    <p class="note en">Simulated data, not real company figures.</p>
-  </div>
-</div>
-
-<dl class="facts">
-  <div><dt>12.000</dt><dd><span class="vi">hồ sơ nhân sự được số hóa</span><span class="en">employee records digitized</span></dd></div>
-  <div><dt>2</dt><dd><span class="vi">dự án số hóa, tôi là PM</span><span class="en">digitization projects as PM</span></dd></div>
-  <div><dt>~200</dt><dd><span class="vi">người dùng hiện tại, dự kiến 2.000–3.000</span><span class="en">users today, 2,000–3,000 expected</span></dd></div>
-</dl>
-
-<section id="cases">
-  <h2 class="s"><span class="vi">Case study</span><span class="en">Case studies</span></h2>
-
-  <article class="case">
-    <div>
-      <h3><span class="vi">Hệ thống báo cáo cho ba nhóm người dùng</span><span class="en">A reporting system for three audiences</span></h3>
-      <p class="vi">Ban Giám đốc, quản lý Marketing và quản lý dự án cần nhìn cùng một dữ liệu tuyển dụng, nhưng từ ba góc độ khác nhau. Tôi xây các dashboard Looker Studio kết nối dữ liệu các kênh với dữ liệu tuyển dụng, mỗi dashboard trả lời đúng câu hỏi của nhóm dùng nó.</p>
-      <p class="en">The Board, the marketing manager and project managers all need the same recruitment data, seen from three angles. I built Looker Studio dashboards that connect channel data with recruitment data, each answering the questions of the people who use it.</p>
-      <p class="vi"><strong>Kết quả:</strong> lãnh đạo quyết định tăng hoặc giảm quy mô tuyển dụng và đầu tư vào kênh hiệu quả; team Marketing cân đối ngân sách quảng cáo theo từng chiến dịch; quản lý dự án lên kế hoạch tuyển bù khi thiếu người.</p>
-      <p class="en"><strong>Result:</strong> leaders decide when to scale recruitment up or down and which channels to invest in; marketing balances ad budgets per campaign; project managers plan replacement hiring when headcount falls short.</p>
-    </div>
-    <dl>
-      <dt class="vi">Vai trò</dt><dt class="en">Role</dt>
-      <dd class="vi">Thiết kế và vận hành báo cáo</dd><dd class="en">Designed and run the reports</dd>
-      <dt class="vi">Công cụ</dt><dt class="en">Tools</dt>
-      <dd>Looker Studio, SQL (Supabase), Google Sheets, Apps Script</dd>
+  <div class="wrap">
+    <dl class="facts">
+      <div><dt>12.000</dt><dd><span class="vi">hồ sơ nhân sự được số hóa</span><span class="en">employee records digitized</span></dd></div>
+      <div><dt>2</dt><dd><span class="vi">dự án số hóa, tôi là PM</span><span class="en">digitization projects as PM</span></dd></div>
+      <div><dt>~200</dt><dd><span class="vi">người dùng hiện tại, dự kiến 2.000–3.000</span><span class="en">users today, 2,000–3,000 expected</span></dd></div>
     </dl>
-    <!-- Thêm ảnh dashboard dữ liệu giả: <img src="img/dashboard.png" alt="..."> / Add a fake-data dashboard image here -->
-  </article>
-
-  <article class="case">
-    <div>
-      <h3><span class="vi">Số hóa 12.000 hồ sơ nhân sự và hệ thống HRM</span><span class="en">Digitizing 12,000 employee records and an HRM system</span></h3>
-      <p class="vi">Hồ sơ lao động của dự án cung ứng lớn nhất miền Bắc được quản lý thủ công và phân tán. Tôi làm PM triển khai phần mềm HRM thuê ngoài, làm việc với đội kỹ thuật để tùy chỉnh theo quy trình công ty: viết URD, vẽ luồng nghiệp vụ, thiết kế phân quyền dữ liệu, tổ chức UAT. Song song, tôi dẫn dắt việc chuẩn hóa, nhập liệu và kiểm soát chất lượng 12.000 hồ sơ.</p>
-      <p class="en">Worker records for the largest labor supply project in Northern Vietnam were managed manually and scattered. As PM, I rolled out an outsourced HRM platform and worked with its engineers to fit company processes: user requirements, process maps, data access design and UAT. In parallel, I led the standardization, entry and quality control of 12,000 records.</p>
-      <p class="vi"><strong>Kết quả:</strong> 12.000 hồ sơ được số hóa; khoảng 50 người dùng ở phòng Tuyển dụng, C&amp;B và Admin được đào tạo.</p>
-      <p class="en"><strong>Result:</strong> 12,000 records digitized; about 50 users in Recruitment, C&amp;B and Admin trained.</p>
-    </div>
-    <dl>
-      <dt class="vi">Vai trò</dt><dt class="en">Role</dt>
-      <dd class="vi">Quản lý dự án (PM)</dd><dd class="en">Project manager (PM)</dd>
-      <dt class="vi">Công cụ</dt><dt class="en">Tools</dt>
-      <dd class="vi">Phần mềm HRM, Excel (Power Query)</dd><dd class="en">HRM software, Excel (Power Query)</dd>
-    </dl>
-  </article>
-
-  <article class="case">
-    <div>
-      <h3><span class="vi">Từ bản thử nghiệm vibe coding đến nền tảng nhân sự toàn công ty</span><span class="en">From a vibe-coded prototype to a company-wide HR platform</span></h3>
-      <p class="vi">Các bộ phận làm việc rời rạc trên nhiều công cụ. Tôi dựng bản thử nghiệm bằng vibe coding (React/Next.js, Supabase) cho khoảng 70 nhân sự nội bộ để kiểm chứng nghiệp vụ. Sau đó công ty đầu tư đội kỹ thuật phát triển thành phần mềm quy mô lớn; tôi trực tiếp viết URD, xây luồng nghiệp vụ, tham gia UAT, nghiệm thu bàn giao và đào tạo người dùng cuối.</p>
-      <p class="en">Teams were working in separate tools. I built a vibe-coded prototype (React/Next.js, Supabase) for about 70 internal staff to validate the workflows. The company then funded an engineering team to build it into large-scale software; I wrote the requirements, designed the workflows, joined UAT, handled acceptance and handover, and trained end users.</p>
-      <p class="vi"><strong>Kết quả:</strong> khoảng 200 người dùng hiện tại (nhân sự nội bộ và mạng lưới CTV), dự kiến 2.000–3.000; hoàn thành khoảng 70% khối lượng sau 6 tháng.</p>
-      <p class="en"><strong>Result:</strong> about 200 users today (internal staff and the collaborator network), 2,000–3,000 expected; about 70% of scope delivered after 6 months.</p>
-    </div>
-    <dl>
-      <dt class="vi">Vai trò</dt><dt class="en">Role</dt>
-      <dd class="vi">Quản lý dự án, chủ sản phẩm</dd><dd class="en">Project manager, product owner</dd>
-      <dt class="vi">Công cụ</dt><dt class="en">Tools</dt>
-      <dd>React/Next.js, Supabase, Vercel, GitHub, Claude</dd>
-    </dl>
-  </article>
-</section>
-
-<section>
-  <h2 class="s"><span class="vi">Tự động hóa</span><span class="en">Automation</span></h2>
-  <div class="cols">
-    <div><h3><span class="vi">Gom lead tự động</span><span class="en">Automatic lead consolidation</span></h3>
-      <p class="vi">Tự động đổ dữ liệu các nguồn lead vào một danh sách tổng bằng Apps Script và n8n.</p>
-      <p class="en">Lead data from every source flows into one master list through Apps Script and n8n.</p></div>
-    <div><h3><span class="vi">Phân bổ lead theo quy tắc</span><span class="en">Rule-based lead assignment</span></h3>
-      <p class="vi">Lead được chia cho nhân viên tư vấn theo quy tắc đặt sẵn, có thông báo qua Zalo, Telegram hoặc email.</p>
-      <p class="en">Leads are assigned to advisors by preset rules, with alerts via Zalo, Telegram or email.</p></div>
-    <div><h3><span class="vi">Chatbot tư vấn ứng viên</span><span class="en">Candidate advisory chatbot</span></h3>
-      <p class="vi">Chatbot dùng mô hình ngôn ngữ lớn (LLM) trả lời ứng viên trên fanpage Facebook và Zalo.</p>
-      <p class="en">An LLM-based chatbot answers candidates on a Facebook fanpage and Zalo.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2 class="s"><span class="vi">Kỹ năng</span><span class="en">Skills</span></h2>
-  <div class="cols">
-    <div><h3><span class="vi">Phân tích dữ liệu</span><span class="en">Data analysis</span></h3>
-      <p class="vi">Excel (Power Query, công thức mảng), SQL (PostgreSQL/Supabase), Python cơ bản, phân tích nhóm (cohort), phễu chuyển đổi, A/B testing.</p>
-      <p class="en">Excel (Power Query, array formulas), SQL (PostgreSQL/Supabase), basic Python, cohort analysis, funnel analysis, A/B testing.</p></div>
-    <div><h3><span class="vi">Báo cáo và tự động hóa</span><span class="en">Reporting and automation</span></h3>
-      <p>Looker Studio, Google Apps Script, n8n, Make, Zapier.</p></div>
-    <div><h3><span class="vi">Chuyển đổi số và sản phẩm</span><span class="en">Digital transformation and product</span></h3>
-      <p class="vi">URD, luồng nghiệp vụ, UAT, đào tạo người dùng, phân quyền dữ liệu nhân sự, vibe coding với React/Next.js và Supabase.</p>
-      <p class="en">Requirements documents, process mapping, UAT, user training, HR data access control, vibe coding with React/Next.js and Supabase.</p></div>
-    <div><h3><span class="vi">Nghiệp vụ nhân sự</span><span class="en">HR domain</span></h3>
-      <p class="vi">Phễu tuyển dụng, hiệu quả theo kênh, quy mô nhân sự, tỷ lệ nghỉ việc, chi phí tuyển dụng, quản lý hồ sơ.</p>
-      <p class="en">Recruitment funnel, channel effectiveness, headcount, turnover, cost per hire, records management.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2 class="s"><span class="vi">Về tôi</span><span class="en">About me</span></h2>
-  <div class="about">
-    <div>
-      <p class="vi">Tôi bắt đầu là trợ lý Ban lãnh đạo kiêm đầu mối vận hành dự án, nơi tôi học nghiệp vụ nhân sự từ thực tế và cách lãnh đạo ra quyết định. Từ đó tôi chuyển sang số hóa, dữ liệu và tự động hóa, vì tôi thấy phần lớn quyết định nhân sự còn thiếu số liệu đúng lúc. Tốt nghiệp loại Xuất sắc ĐH Kinh tế Quốc dân (GPA 3.76/4.0).</p>
-      <p class="en">I started as an assistant to the leadership team and project operations lead, where I learned HR operations from the ground up and how leaders make decisions. I then moved into digitization, data and automation because many HR decisions lacked timely numbers. I graduated with Excellent honors from the National Economics University (GPA 3.76/4.0).</p>
-      <p class="vi">Ngoại ngữ: IELTS 7.5 (Reading 9.0), JLPT N3, 10 năm phiên dịch tự do tiếng Anh.</p>
-      <p class="en">Languages: IELTS 7.5 (Reading 9.0), JLPT N3, 10 years of freelance English interpreting.</p>
-    </div>
-    <ul>
+    <h2 class="s"><span class="vi">Giải thưởng</span><span class="en">Awards</span></h2>
+    <ul class="aw">
       <li class="vi">Top 100 cuộc thi “Tìm kiếm Tài năng Khởi nghiệp sáng tạo Quốc gia” TECHFEST Việt Nam 2026</li>
       <li class="en">Top 100, TECHFEST Vietnam 2026 National Innovative Startup Talent Search</li>
       <li class="vi">Giải nhất cuộc thi đổi mới sáng tạo nội bộ công ty, 2026</li>
@@ -203,30 +157,111 @@ footer .c{font-size:1.05rem;color:var(--ink);margin-bottom:.75rem}
     </ul>
   </div>
 </section>
+
+<section id="experience" hidden><div class="wrap">
+  <h2 class="s"><span class="vi">Kinh nghiệm làm việc</span><span class="en">Work experience</span></h2>
+  <div class="tl">
+    <div class="job">
+      <h3 class="vi">Chuyên viên Marketing – Chiến lược (Dữ liệu và Tự động hóa)</h3><h3 class="en">Marketing &amp; Strategy Specialist (Data and Automation)</h3>
+      <div class="when"><span class="vi">09/2024 – nay</span><span class="en">09/2024 – present</span></div>
+      <ul class="vi"><li>Dẫn dắt dự án số hóa thứ hai: nền tảng nhân sự toàn công ty, khoảng 200 người dùng (dự kiến 2.000–3.000), hoàn thành khoảng 70% khối lượng sau 6 tháng.</li><li>Dựng bản thử nghiệm vibe coding, sau đó làm việc với đội kỹ thuật để nâng cấp: viết URD, tham gia UAT, nghiệm thu bàn giao, đào tạo người dùng.</li><li>Vận hành dashboard Looker Studio cho Ban Giám đốc, team Marketing và quản lý dự án.</li><li>Tự động hóa bằng Apps Script và n8n; xây chatbot LLM tư vấn ứng viên.</li></ul>
+      <ul class="en"><li>Lead the second digitization project: a company-wide HR platform with about 200 users (2,000–3,000 expected), about 70% of scope delivered after 6 months.</li><li>Built a vibe-coded prototype, then worked with engineers to scale it: wrote requirements, joined UAT, handled acceptance and handover, trained users.</li><li>Run Looker Studio dashboards for the Board, the Marketing team and project managers.</li><li>Automate with Apps Script and n8n; built an LLM candidate advisory chatbot.</li></ul>
+    </div>
+    <div class="job">
+      <h3 class="vi">Chuyên viên dự án (Quản lý dự án số hóa)</h3><h3 class="en">Project Specialist (Digitization PM)</h3>
+      <div class="when">03/2024 – 09/2024</div>
+      <ul class="vi"><li>Quản lý dự án số hóa quản trị nhân sự trên phần mềm HRM thuê ngoài: URD, luồng nghiệp vụ, phân quyền dữ liệu, UAT.</li><li>Dẫn dắt số hóa 12.000 hồ sơ nhân sự: chuẩn hóa, nhập liệu, kiểm soát chất lượng.</li><li>Đào tạo khoảng 50 người dùng ở các phòng Tuyển dụng, C&amp;B, Admin.</li></ul>
+      <ul class="en"><li>Managed the HR digitization project on an outsourced HRM platform: requirements, process maps, data access, UAT.</li><li>Led the digitization of 12,000 employee records: standardization, entry, quality control.</li><li>Trained about 50 users in Recruitment, C&amp;B and Admin.</li></ul>
+    </div>
+    <div class="job">
+      <h3 class="vi">Trợ lý Ban lãnh đạo kiêm Đầu mối dự án</h3><h3 class="en">Executive Assistant &amp; Project Operations Lead</h3>
+      <div class="when">01/2023 – 03/2024</div>
+      <ul class="vi"><li>Đầu mối vận hành dự án cung ứng lớn nhất miền Bắc thời điểm đó, làm việc với 12.000 hồ sơ lao động.</li><li>Lập báo cáo quy mô nhân sự, tỷ lệ nghỉ việc, chi phí tuyển dụng và dashboard theo dõi dự án, giúp lãnh đạo quyết định tăng hoặc giảm quy mô tuyển dụng và đầu tư vào kênh hiệu quả.</li><li>Hỗ trợ Tổng giám đốc điều hành, theo dõi tiến độ và báo cáo hoạt động tuyển dụng theo phễu.</li></ul>
+      <ul class="en"><li>Operations lead for the largest labor supply project in Northern Vietnam at the time, working with 12,000 worker records.</li><li>Built headcount, turnover and cost-per-hire reports and a project dashboard, helping leaders decide when to scale recruitment and which channels to invest in.</li><li>Supported the General Director with daily management, progress tracking and funnel-based recruitment reporting.</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects" hidden><div class="wrap">
+  <h2 class="s"><span class="vi">Dự án</span><span class="en">Projects</span></h2>
+  <article class="card">
+    <h3 class="vi">Nền tảng nhân sự toàn công ty: từ bản thử nghiệm đến hệ thống quy mô lớn</h3><h3 class="en">Company-wide HR platform: from prototype to large-scale system</h3>
+    <p class="vi">Các bộ phận làm việc rời rạc trên nhiều công cụ. Tôi dựng bản thử nghiệm vibe coding cho khoảng 70 nhân sự để kiểm chứng nghiệp vụ; sau đó công ty đầu tư đội kỹ thuật phát triển thành phần mềm gồm tuyển dụng, nhân sự, khách hàng, CTV, chi phí, có phân quyền. Kết quả: khoảng 200 người dùng, dự kiến 2.000–3.000; khoảng 70% khối lượng sau 6 tháng.</p>
+    <p class="en">Teams worked in separate tools. I built a vibe-coded prototype for about 70 staff to validate the workflows; the company then funded engineers to build recruitment, HR, clients, collaborators and costs into one platform with role-based access. Result: about 200 users, 2,000–3,000 expected; about 70% of scope after 6 months.</p>
+    <div class="meta vi">Vai trò: quản lý dự án, chủ sản phẩm. Công cụ: React/Next.js, Supabase, Vercel, GitHub, Claude.</div><div class="meta en">Role: project manager, product owner. Tools: React/Next.js, Supabase, Vercel, GitHub, Claude.</div>
+  </article>
+  <article class="card">
+    <h3 class="vi">Số hóa 12.000 hồ sơ nhân sự và hệ thống HRM</h3><h3 class="en">Digitizing 12,000 employee records and an HRM system</h3>
+    <p class="vi">Hồ sơ lao động được quản lý thủ công, dữ liệu phân tán. Tôi triển khai phần mềm HRM thuê ngoài, tùy chỉnh cùng đội kỹ thuật theo quy trình công ty, thiết kế phân quyền dữ liệu, tổ chức UAT và dẫn dắt chuẩn hóa toàn bộ hồ sơ. Kết quả: 12.000 hồ sơ được số hóa, khoảng 50 người dùng được đào tạo.</p>
+    <p class="en">Worker records were managed manually and scattered. I rolled out an outsourced HRM platform, customized it with engineers to company processes, designed data access, ran UAT and led the standardization of every record. Result: 12,000 records digitized, about 50 users trained.</p>
+    <div class="meta vi">Vai trò: quản lý dự án. Công cụ: phần mềm HRM, Excel (Power Query).</div><div class="meta en">Role: project manager. Tools: HRM software, Excel (Power Query).</div>
+  </article>
+  <article class="card">
+    <h3 class="vi">Hệ thống báo cáo cho ba nhóm người dùng</h3><h3 class="en">A reporting system for three audiences</h3>
+    <p class="vi">Ban Giám đốc, quản lý Marketing và quản lý dự án cần cùng một dữ liệu tuyển dụng ở ba góc nhìn. Các dashboard Looker Studio giúp lãnh đạo quyết định quy mô tuyển dụng và kênh đầu tư, Marketing cân đối ngân sách quảng cáo theo chiến dịch, quản lý dự án lên kế hoạch tuyển bù khi thiếu người.</p>
+    <p class="en">The Board, the marketing manager and project managers need the same recruitment data from three angles. Looker Studio dashboards help leaders set hiring scale and channel investment, Marketing balance ad budgets per campaign, and project managers plan replacement hiring.</p>
+    <div class="meta vi">Vai trò: thiết kế và vận hành báo cáo. Công cụ: Looker Studio, SQL (Supabase), Google Sheets.</div><div class="meta en">Role: designed and run the reports. Tools: Looker Studio, SQL (Supabase), Google Sheets.</div>
+  </article>
+  <h2 class="s"><span class="vi">Tự động hóa</span><span class="en">Automation</span></h2>
+  <div class="cols">
+    <div><h3><span class="vi">Gom lead tự động</span><span class="en">Lead consolidation</span></h3><p class="vi">Dữ liệu các nguồn lead tự đổ vào một danh sách tổng bằng Apps Script và n8n.</p><p class="en">Lead data from every source flows into one master list via Apps Script and n8n.</p></div>
+    <div><h3><span class="vi">Phân bổ lead theo quy tắc</span><span class="en">Rule-based assignment</span></h3><p class="vi">Lead được chia cho nhân viên tư vấn theo quy tắc, có thông báo qua Zalo, Telegram, email.</p><p class="en">Leads go to advisors by preset rules, with alerts via Zalo, Telegram or email.</p></div>
+    <div><h3><span class="vi">Chatbot tư vấn ứng viên</span><span class="en">Candidate chatbot</span></h3><p class="vi">Chatbot LLM trả lời ứng viên trên fanpage Facebook và Zalo.</p><p class="en">An LLM chatbot answers candidates on a Facebook fanpage and Zalo.</p></div>
+  </div>
+</div></section>
+
+<section id="products" hidden><div class="wrap">
+  <h2 class="s"><span class="vi">Sản phẩm</span><span class="en">Products</span></h2>
+  <div class="funnel" role="img" aria-label="Sample funnel: 100% leads, 72% contacted, 41% interviewed, 22% started, 17% still working at day 90">
+    <h3><span class="vi">Mẫu phễu tuyển dụng, từ lead đến gắn bó 90 ngày</span><span class="en">Sample recruitment funnel, from lead to day 90</span></h3>
+    <div class="row"><span><span class="vi">Lead</span><span class="en">Leads</span></span><div class="b" style="--w:100%">100%</div></div>
+    <div class="row"><span><span class="vi">Đã liên hệ</span><span class="en">Contacted</span></span><div class="b" style="--w:72%">72%</div></div>
+    <div class="row"><span><span class="vi">Phỏng vấn</span><span class="en">Interviewed</span></span><div class="b" style="--w:41%">41%</div></div>
+    <div class="row"><span><span class="vi">Đi làm</span><span class="en">Started work</span></span><div class="b" style="--w:22%">22%</div></div>
+    <div class="row"><span><span class="vi">Còn làm sau 90 ngày</span><span class="en">Still working at day 90</span></span><div class="b last" style="--w:17%">17%</div></div>
+    <p class="note vi">Dữ liệu mô phỏng, không phải số liệu thật của công ty.</p><p class="note en">Simulated data, not real company figures.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot"><div class="frame"><img src="img/product-1.png" alt="" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph vi">Thêm ảnh: img/product-1.png</span><span class="ph en">Add image: img/product-1.png</span></div><figcaption class="vi">Dashboard dành cho Ban Giám đốc</figcaption><figcaption class="en">Dashboard for the Board</figcaption></figure>
+    <figure class="shot"><div class="frame"><img src="img/product-2.png" alt="" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph vi">Thêm ảnh: img/product-2.png</span><span class="ph en">Add image: img/product-2.png</span></div><figcaption class="vi">Dashboard hiệu quả quảng cáo và kênh social</figcaption><figcaption class="en">Ad and social channel performance dashboard</figcaption></figure>
+    <figure class="shot"><div class="frame"><img src="img/product-3.png" alt="" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph vi">Thêm ảnh: img/product-3.png</span><span class="ph en">Add image: img/product-3.png</span></div><figcaption class="vi">Ứng dụng nhân sự (bản thử nghiệm vibe coding)</figcaption><figcaption class="en">HR app (vibe-coded prototype)</figcaption></figure>
+    <figure class="shot"><div class="frame"><img src="img/product-4.png" alt="" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph vi">Thêm ảnh: img/product-4.png</span><span class="ph en">Add image: img/product-4.png</span></div><figcaption class="vi">Luồng tự động hóa n8n</figcaption><figcaption class="en">n8n automation workflow</figcaption></figure>
+  </div>
+  <p class="note vi">Hình ảnh dùng dữ liệu mô phỏng hoặc đã làm mờ; không hiển thị thông tin thật của công ty, đối tác hay cá nhân.</p>
+  <p class="note en">Images use simulated or blurred data; no real company, partner or personal information is shown.</p>
+</div></section>
 </main>
 
-<footer>
-  <div class="c"><span class="vi">Liên hệ</span><span class="en">Contact</span>: <a href="mailto:daolinh921@gmail.com">daolinh921@gmail.com</a> | <a href="https://linkedin.com/in/linh-dao-ngoc">LinkedIn</a> | Hà Nội</div>
-  <div class="vi">Mọi hình ảnh và số liệu minh họa trong trang này là dữ liệu mô phỏng. Tên công ty và đối tác được ẩn.</div>
-  <div class="en">All visuals and figures on this page are simulated. Company and partner names are withheld.</div>
-</footer>
-</div>
+<footer><div class="wrap"><span class="vi">Liên hệ</span><span class="en">Contact</span>: <a href="mailto:daolinh921@gmail.com">daolinh921@gmail.com</a> | <a href="https://linkedin.com/in/linh-dao-ngoc">LinkedIn</a> | Hà Nội</div></footer>
 
 <script>
 (function(){
-  var KEY="portfolio-lang",l=null;
-  try{l=localStorage.getItem(KEY)}catch(e){}
+  var root=document.documentElement,L="portfolio-lang",T="portfolio-theme",l=null,t=null;
+  try{l=localStorage.getItem(L);t=localStorage.getItem(T)}catch(e){}
+  if(t==="dark"||t==="light"){root.setAttribute("data-theme",t)}
   if(l!=="vi"&&l!=="en"){l=((navigator.language||"vi").toLowerCase().indexOf("vi")===0)?"vi":"en"}
-  var titles={vi:"Đào Ngọc Linh | Data & BI, HR Analytics",en:"Linh Dao Ngoc | Data & BI, HR Analytics"};
-  var cv={vi:"cv-vi.pdf",en:"cv-en.pdf"};
-  function set(x){
-    document.documentElement.lang=x;document.title=titles[x];
-    document.getElementById("cvlink").setAttribute("href",cv[x]);
+  var titles={vi:"Đào Ngọc Linh | Data & BI, HR Analytics",en:"Linh Dao Ngoc | Data & BI, HR Analytics"},cv={vi:"cv-vi.pdf",en:"cv-en.pdf"};
+  function setLang(x){
+    root.lang=x;document.title=titles[x];document.getElementById("cvlink").setAttribute("href",cv[x]);
     document.querySelectorAll(".lb button").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-l")===x?"true":"false")});
-    try{localStorage.setItem(KEY,x)}catch(e){}
+    try{localStorage.setItem(L,x)}catch(e){}
   }
-  document.querySelectorAll(".lb button").forEach(function(b){b.addEventListener("click",function(){set(b.getAttribute("data-l"))})});
-  set(l);
+  document.querySelectorAll(".lb button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-l"))})});
+  document.getElementById("theme").addEventListener("click",function(){
+    var cur=root.getAttribute("data-theme");
+    var isDark=cur?cur==="dark":window.matchMedia("(prefers-color-scheme:dark)").matches;
+    var n=isDark?"light":"dark";root.setAttribute("data-theme",n);
+    try{localStorage.setItem(T,n)}catch(e){}
+  });
+  var tabs=["bio","experience","projects","products"];
+  function route(){
+    var h=(location.hash||"#bio").slice(1);if(tabs.indexOf(h)<0){h="bio"}
+    document.querySelectorAll("main > section").forEach(function(s){s.hidden=(s.id!==h)});
+    document.querySelectorAll("nav a").forEach(function(a){if(a.getAttribute("href")==="#"+h){a.setAttribute("aria-current","page")}else{a.removeAttribute("aria-current")}});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange",route);
+  setLang(l);route();
 })();
 </script>
 </body>
